@@ -1,0 +1,16 @@
+<%= with_template("philosophers_table") do |template| %>
+  <% template.before :person do |index| %>
+    <div class="chair <%= "person#{index}" %>">
+      <%= image_tag "chair.png" %>
+    </div>
+  <% end %>
+  <% template.replace :person do |index| %>
+    <%= magician_image(index) %>
+  <% end %>
+  <% template.replace :tool do |index| %>
+    <%= image_tag "wand.png" %>
+  <% end %>
+  <% template.replace :plate do |index| %>
+    <%= image_tag "rabbit_in_a_hat.png" %>
+  <% end %>
+<% end %>

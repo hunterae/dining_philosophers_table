@@ -1,0 +1,96 @@
+.philosophers_table {
+  position: relative;
+}
+
+.table {
+  position: absolute;
+  top: 250px;
+  left: 250px;
+}
+
+.plate, .table, .person, .tool, .chair {
+  position: absolute;
+}
+
+.chair {
+  margin-left: -157px;
+}
+
+.plate1 {
+  left: 509px;
+  top: 270px;
+}
+
+.plate2 {
+  left: 758px;
+  top: 435px;
+}
+
+.plate3 {
+  left: 701px;
+  top: 700px;
+}
+
+.plate4 {
+  left: 330px;
+  top: 700px;
+}
+
+.plate5 {
+  left: 276px;
+  top: 435px;
+}
+
+.person1 {
+  top: 0;
+  left: 519px;
+}
+
+.person2 {
+  top: 274px;
+  left: 969px;
+}
+
+.person3 {
+  top: 765px;
+  left: 901px;
+}
+
+.person4 {
+  top: 776px;
+  left: 134px;
+}
+
+.person5 {
+  top: 264px;
+  left: 82px;
+}
+
+.tool1 {
+  top: 374px;
+  left: 440px;
+}
+
+.tool2 {
+  top: 362px;
+  left: 733px;
+  -webkit-transform: rotate(79deg);
+}
+
+.tool3 {
+  top: 626px;
+  left: 817px;
+  -webkit-transform: rotate(155deg);
+}
+
+.tool4 {
+  top: 811px;
+  left: 562px;
+  -webkit-transform: rotate(219deg);
+}
+
+.tool5 {
+  top: 628px;
+  left: 305px;
+  -webkit-transform: rotate(286deg);
+}
