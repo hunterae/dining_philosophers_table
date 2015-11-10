@@ -4,13 +4,13 @@
       <%= image_tag "chair.png", width: "300px" %>
     </div>
   <% end %>
-  <% template.replace :person do |index| %>
+  <% template.define :person do |index| %>
     <%= magician_image(index) %>
   <% end %>
-  <% template.replace :tool do |index| %>
+  <% template.define :tool do |index| %>
     <%= image_tag "wand.png" %>
   <% end %>
-  <% template.replace :plate do |index| %>
+  <% template.define :plate do |index| %>
     <%= image_tag "rabbit_in_a_hat.png" %>
   <% end %>
 <% end %>

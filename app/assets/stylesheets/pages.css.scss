@@ -3,14 +3,13 @@
   height: 1200px;
 }
 
-.empty-table {
-  position: absolute;
-  top: 250px;
-  left: 168px;
-}
-
 .plate, .empty-table, .person, .tool, .chair {
   position: absolute;
+}
+
+.empty-table {
+  top: 250px;
+  left: 168px;
 }
 
 .chair {

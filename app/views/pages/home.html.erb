@@ -1,45 +1,15 @@
-<div class="container">
-  <!-- Nav tabs -->
-   <ul class="nav nav-tabs" role="tablist">
-     <% (1..4).each do |i| %>
-        <li role="presentation" class="<%= 'active' if i == 1 %>"><a href="#step<%= i %>" aria-controls="step<%= i %>" role="tab" data-toggle="tab">Step <%= i %></a></li>
-     <% end %>
-     <li role="presentation"><a href="#template" aria-controls="template" role="tab" data-toggle="tab">Template</a></li>
-   </ul>
+<!-- Nav tabs -->
+ <ul class="nav nav-tabs" role="tablist">
+   <% (1..4).each do |i| %>
+      <li role="presentation" class="<%= 'active' if i == 1 %>"><a href="#step<%= i %>" aria-controls="step<%= i %>" role="tab" data-toggle="tab">Step <%= i %></a></li>
+   <% end %>
+   <li role="presentation"><a href="#template" aria-controls="template" role="tab" data-toggle="tab">Template</a></li>
+ </ul>
 
-   <!-- Tab panes -->
-   <div class="tab-content">
-     <% (1..4).each do |i| %>
-       <div role="tabpanel" class="tab-pane <%= 'active' if i == 1 %>" id="step<%= i %>">
-         <br>
-         <div class="panel panel-info">
-           <div class="panel-heading">
-             <h3 class="panel-title"><%= "Code" %></h3>
-           </div>
-           <div class="panel-body">
-             <pre>
-               <code class="erb">
-<%= File.new("#{Rails.root}/app/views/pages/step#{i}.html.erb").read %>
-               </code>
-             </pre>
-           </div>
-         </div>
-
-         <div class="panel panel-primary">
-           <div class="panel-heading">
-             <h3 class="panel-title">Output</h3>
-           </div>
-           <div class="panel-body">
-             <div class="row">
-               <div class="col-md-12">
-                 <%= render template: "pages/step#{i}" %>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-     <% end %>
-     <div role="tabpanel" class="tab-pane" id="template">
+ <!-- Tab panes -->
+ <div class="tab-content">
+   <% (1..4).each do |i| %>
+     <div role="tabpanel" class="tab-pane <%= 'active' if i == 1 %>" id="step<%= i %>">
        <br>
        <div class="panel panel-info">
          <div class="panel-heading">
@@ -48,14 +18,42 @@
          <div class="panel-body">
            <pre>
              <code class="erb">
-<%= File.new("#{Rails.root}/app/views/pages/_philosophers_table.html.erb").read %>
+<%= File.new("#{Rails.root}/app/views/pages/step#{i}.html.erb").read %>
              </code>
            </pre>
          </div>
        </div>
+
+       <div class="panel panel-primary">
+         <div class="panel-heading">
+           <h3 class="panel-title">Output</h3>
+         </div>
+         <div class="panel-body">
+           <div class="row">
+             <div class="col-md-12">
+               <%= render template: "pages/step#{i}" %>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   <% end %>
+   <div role="tabpanel" class="tab-pane" id="template">
+     <br>
+     <div class="panel panel-info">
+       <div class="panel-heading">
+         <h3 class="panel-title"><%= "Code" %></h3>
+       </div>
+       <div class="panel-body">
+         <pre>
+           <code class="erb">
+<%= File.new("#{Rails.root}/app/views/pages/_philosophers_table.html.erb").read %>
+           </code>
+         </pre>
+       </div>
      </div>
    </div>
-</div>
+ </div>
 
 <script type="text/javascript">
 $(document).ready(function() {

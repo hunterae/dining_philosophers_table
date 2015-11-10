@@ -1,34 +1,25 @@
 <%= template.define :philosophers_table do %>
   <div class="philosophers_table">
-    <%= template.render :people %>
-    <%= template.render :table %>
-    <%= template.render :plates %>
-    <%= template.render :tools %>
+    <%= template.render :person, collection: 1..5,
+          wrap_each: { class: lambda {|index| "person person#{index}"}, tag: "div" } %>
+    <%= template.render :empty_table %>
+    <%= template.render :plate, collection: 1..5,
+          wrap_each: { class: lambda {|index| "plate plate#{index}"}, tag: "div" } %>
+    <%= template.render :tool, collection: 1..5,
+          wrap_each: { class: lambda {|index| "tool tool#{index}"}, tag: "div" }  %>
   </div>
 <% end %>
 
-<%= template.define :table do %>
+<%= template.define :empty_table do %>
   <%= image_tag "table.png", :class => 'empty-table' %>
-<% end %>
-
-<%= template.define :plates do %>
-  <%= template.render :plate, collection: 1..5, wrap_each: { class: lambda {|index| "plate plate#{index}"}, tag: "div" } %>
 <% end %>
 
 <%= template.define :plate do |index| %>
   <%= image_tag "plate.png" %>
 <% end %>
 
-<%= template.define :people do %>
-  <%= template.render :person, collection: 1..5, wrap_each: { class: lambda {|index| "person person#{index}"}, tag: "div" } %>
-<% end %>
-
 <%= template.define :person do |index| %>
   <%= image_tag "philosopher#{index}.png" %>
-<% end %>
-
-<%= template.define :tools do %>
-  <%= template.render :tool, collection: 1..5, wrap_each: { class: lambda {|index| "tool tool#{index}"}, tag: "div" }  %>
 <% end %>
 
 <%= template.define :tool do |index| %>
