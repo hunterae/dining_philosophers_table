@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+pre {
+  background-color: inherit !important;
+  border: 0 !important;
+  padding: 0 !important;
+}

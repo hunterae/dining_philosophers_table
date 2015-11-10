@@ -1,7 +1,7 @@
 <%= with_template("philosophers_table") do |template| %>
   <%= template.before :person do |index| %>
     <div class="chair <%= "person#{index}" %>">
-      <%= image_tag "chair.png" %>
+      <%= image_tag "chair.png", width: "300px" %>
     </div>
   <% end %>
 <% end %>

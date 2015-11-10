@@ -1,96 +1,98 @@
 .philosophers_table {
   position: relative;
+  height: 1200px;
 }
 
-.table {
+.empty-table {
   position: absolute;
   top: 250px;
-  left: 250px;
+  left: 168px;
 }
 
-.plate, .table, .person, .tool, .chair {
+.plate, .empty-table, .person, .tool, .chair {
   position: absolute;
 }
 
 .chair {
-  margin-left: -157px;
+  margin-left: -50px;
+  margin-top: 100px;
 }
 
 .plate1 {
-  left: 509px;
+  left: 427px;
   top: 270px;
 }
 
 .plate2 {
-  left: 758px;
+  left: 676px;
   top: 435px;
 }
 
 .plate3 {
-  left: 701px;
+  left: 619px;
   top: 700px;
 }
 
 .plate4 {
-  left: 330px;
+  left: 248px;
   top: 700px;
 }
 
 .plate5 {
-  left: 276px;
+  left: 194px;
   top: 435px;
 }
 
 .person1 {
   top: 0;
-  left: 519px;
+  left: 437px;
 }
 
 .person2 {
   top: 274px;
-  left: 969px;
+  left: 887px;
 }
 
 .person3 {
   top: 765px;
-  left: 901px;
+  left: 819px;
 }
 
 .person4 {
   top: 776px;
-  left: 134px;
+  left: 52px;
 }
 
 .person5 {
   top: 264px;
-  left: 82px;
+  left: 0px;
 }
 
 .tool1 {
   top: 374px;
-  left: 440px;
+  left: 358px;
 }
 
 .tool2 {
   top: 362px;
-  left: 733px;
+  left: 651px;
   -webkit-transform: rotate(79deg);
 }
 
 .tool3 {
   top: 626px;
-  left: 817px;
+  left: 735px;
   -webkit-transform: rotate(155deg);
 }
 
 .tool4 {
   top: 811px;
-  left: 562px;
+  left: 480px;
   -webkit-transform: rotate(219deg);
 }
 
 .tool5 {
   top: 628px;
-  left: 305px;
+  left: 223px;
   -webkit-transform: rotate(286deg);
 }
